@@ -1,9 +1,8 @@
-<h1>
+<h2>
 	<%= @pet.name %>
 	<%= @pet.found ? 'found 🎉' : 'missing 😢'%>
-</h1>
-<h3><strong>specy:</strong><%= @pet.specy %></h3>
+</h2>
+<p><strong>specy:</strong><%= @pet.specy %></p>
 <p><strong>sign:</strong> <%= @pet.sign %></p>
 
-<%= link_to 'edit this pet', edit_pet_path(@pet) %>
-<%= link_to 'all pets', pets_path %>
+<%= link_to 'edit this pet', edit_pet_path(@pet), class: 'btn btn-secondary btn-sm' %>

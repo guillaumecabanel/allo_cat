@@ -1,10 +1,15 @@
-<ul>
+<ul class="list-group">
 	<% pets.each do |pet| %>
-		<li>
+		<li class="list-group-item flexbox-between">
 			<%= link_to pet_path(pet) do %>
 				<%= pet.name %> [<%= pet.specy %>] - <%= pet.sign %> 
 			<% end %>
-			| <%= link_to 'remove from list', pet_path(pet), method: :delete, data: {confirm: 'are you sure?'} %>
+
+			<% if pet.found %>
+				<%= link_to pet_path(pet), method: :delete, data: {confirm: 'are you sure?'} do %>
+					❎
+				<% end %>
+			<% end %>
 		</li>
 	<% end %>
 </ul>

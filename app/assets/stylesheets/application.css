@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	padding-top: 20px;
+}
+
+.flexbox-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
