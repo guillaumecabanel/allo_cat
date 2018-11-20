@@ -1,24 +1,8 @@
-# README
+# ALLO CAT app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Features
+- Visitor can list all missing pets
+- Visitor can see a missing pet
+- Visitor can add a missing pet
+- Visitor can mark a pet as found
+- Visitor can remove a pet from the list
