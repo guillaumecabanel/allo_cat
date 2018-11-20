@@ -5,4 +5,4 @@
 [X] Visitor can see a missing pet
 [X] Visitor can add a missing pet
 [X] Visitor can mark a pet as found
-[ ] Visitor can remove a pet from the list
+[X] Visitor can remove a pet from the list

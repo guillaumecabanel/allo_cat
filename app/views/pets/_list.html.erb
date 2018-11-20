@@ -2,8 +2,9 @@
 	<% pets.each do |pet| %>
 		<li>
 			<%= link_to pet_path(pet) do %>
-				<%= pet.name %> [<%= pet.specy %>] - <%= pet.sign %>
+				<%= pet.name %> [<%= pet.specy %>] - <%= pet.sign %> 
 			<% end %>
+			| <%= link_to 'remove from list', pet_path(pet), method: :delete, data: {confirm: 'are you sure?'} %>
 		</li>
 	<% end %>
 </ul>
