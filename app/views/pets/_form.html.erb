@@ -1,0 +1,21 @@
+<%= form_for @pet do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :specy %>
+	<%= f.text_field :specy %>
+
+	<%= f.label :sign %>
+	<%= f.text_field :sign %>
+
+	<% if @pet.persisted? %>
+		<%= f.label :found, 'Found?' %>
+		<%= f.check_box :found %>
+	<% end %>
+
+	<% if @pet.persisted? %>
+		<%= f.submit 'Update' %>
+	<% else %>
+		<%= f.submit 'Add this missing pet' %>
+	<% end %>
+<% end %>

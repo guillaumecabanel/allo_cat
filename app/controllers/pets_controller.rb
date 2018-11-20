@@ -1,10 +1,12 @@
 class PetsController < ApplicationController
+  before_action :set_pet, only: [:show, :edit, :update]
+
   def index
-  	@pets = Pet.all
+  	@missing_pets = Pet.where(found: false)
+  	@found_pets   = Pet.where(found: true)
   end
 
   def show
-  	@pet = Pet.find(params[:id])
   end
 
   def new
@@ -16,13 +18,26 @@ class PetsController < ApplicationController
   	redirect_to pets_path
   end
 
+  def edit
+  end
+
+  def update
+  	@pet.update(pet_params)
+  	redirect_to pet_path(@pet)
+  end
+
   private
 
   def pet_params
   	params.require(:pet).permit(
   		:name,
   		:specy,
-  		:sign
+  		:sign,
+  		:found
   	)
+  end
+
+  def set_pet
+  	@pet = Pet.find(params[:id])
   end
 end

@@ -2,12 +2,7 @@
 
 <%= link_to 'Lost a pet?', new_pet_path %>
 
-<ul>
-	<% @pets.each do |pet| %>
-		<li>
-			<%= link_to pet_path(pet) do %>
-				<%= pet.name %> [<%= pet.specy %>] - <%= pet.sign %>
-			<% end %>
-		</li>
-	<% end %>
-</ul>
+<%= render 'list', pets: @missing_pets %>
+
+<h2>All found pets</h2>
+<%= render 'list', pets: @found_pets %>

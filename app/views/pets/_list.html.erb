@@ -1,0 +1,9 @@
+<ul>
+	<% pets.each do |pet| %>
+		<li>
+			<%= link_to pet_path(pet) do %>
+				<%= pet.name %> [<%= pet.specy %>] - <%= pet.sign %>
+			<% end %>
+		</li>
+	<% end %>
+</ul>
