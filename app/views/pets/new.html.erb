@@ -1,0 +1,14 @@
+<h1>Lost a pet?</h1>
+
+<%= form_for @pet do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :specy %>
+	<%= f.text_field :specy %>
+
+	<%= f.label :sign %>
+	<%= f.text_field :sign %>
+
+	<%= f.submit %>
+<% end %>
